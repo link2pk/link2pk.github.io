@@ -1,0 +1,200 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* Custom CSS for: designgems.in
+   Author: Praveen Kumar 
+   */
+
+#load_screen{
+	background: #000;
+	opacity: .8;
+	position: fixed;
+    z-index:10;
+	top: 0px;
+	width: 100%;
+	height: 1600px;
+}
+#load_screen > #loading{
+	color:#FFF;
+	width:120px;
+	height:24px;
+	margin: 300px auto;
+}
+
+
+@font-face {
+    font-family: 'simplificasimplifica';
+    src: url('../fonts/simplifica_typeface-webfont.eot');
+    src: url('../fonts/simplifica_typeface-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/simplifica_typeface-webfont.woff2') format('woff2'),
+         url('../fonts/simplifica_typeface-webfont.woff') format('woff'),
+         url('../fonts/simplifica_typeface-webfont.ttf') format('truetype'),
+         url('../fonts/simplifica_typeface-webfont.svg#simplificasimplifica') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'pennaregular';
+    src: url('../fonts/penna-webfont.eot');
+    src: url('../fonts/penna-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/penna-webfont.woff2') format('woff2'),
+         url('../fonts/penna-webfont.woff') format('woff'),
+         url('../fonts/penna-webfont.ttf') format('truetype'),
+         url('../fonts/penna-webfont.svg#pennaregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+*{	
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	}
+   
+body {
+	background: url(../images/blackNwhite.png) center top repeat-y;
+	font:25px 'pennaregular';
+	letter-spacing:.2px;
+	
+	
+}
+.work{ background: #fff;}
+::-moz-selection { background:#eeeeee; color:#111111;}
+::selection { background:#eeeeee; color:#111111;}
+::-moz-selection {	background:#eeeeee;color:#111111;}
+
+img { max-width:100%; height:auto;}
+a{ color:rgba(255,255,255,.7); text-decoration:none;}
+a:hover {color:rgba(255,255,255,1);}
+
+
+.outer {
+    display: table;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.middle {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+
+
+.wrapper {
+	width: 708px;
+	margin: 0 auto; 
+}
+
+
+.mainSecion { margin-bottom:100px;width:100%; float:left;}
+
+.work .mainSecion{ background-color: #000;}
+
+.h1main { text-align:center; font-size:30px; font-family: 'simplificasimplifica'; line-height:30px; padding:50px 0; display:inline-block;}
+.h1slash{ background: url(../images/slash.png) center center no-repeat; width:12px; height:32px; display:inline-block; vertical-align:bottom;}
+
+.h1span1 { margin-left:14px; }
+.h1span2 { color:#ffffff; }
+.work .h1span2 { color: #000;}
+
+
+.pic { float:left;}
+
+.content { float:left; width:353px; border: 1px solid #424242; border-left:none; color:rgba(255,255,255,.9);  padding:71px 37px;}
+
+.work .content{ width: 100%; position: relative;}
+
+.goto-home{ position: absolute; right: 0; top: -30px; color: #000; }
+.goto-home:hover { color: #000;}
+.content p { line-height:24px;  margin-bottom:20px;}
+
+
+.details { float:left; width:100%; padding-top:20px; margin-top:14px; border-top:1px solid #424242; text-align:right; line-height:24px;}
+
+.details span { }
+.details a { font-size:21px; }
+
+.pic2 {  display:none;}
+
+header { text-align:center;}    
+.work-list{ text-align: center;}
+
+/*Media queries*/   
+
+@media (max-width:708px){
+	.wrapper { width:100%; }
+	.pic { width:50%;}
+	.content { width:50%; border:none; padding-bottom:0; padding-top:40px;}
+	.work .content{ padding: 40px 0;}
+	.mainSecion {  background-color:#000000; border-top:1px solid #424242; border-bottom:1px solid #424242;}
+	}
+
+@media (max-width:640px){ 
+	.details { margin-top:28px;}
+	
+	}
+
+@media (max-width:639px){
+	.mainSecion { margin-bottom:0;}
+	.wrapper { margin:0 auto;}
+	.pic,.content { width:100%; float:left;}
+	.pic { text-align:right;}
+	.details{ padding-bottom:20px;}
+	.h1main { font-size:28px; }
+	.work .h1main{ padding-top: 0;}
+	}
+@media (max-width:480px){
+	
+	.h1span1 { margin-left:12px; }
+	.pic2 { display:inline-block;}
+	.pic1 { display:none;}
+	}
+
+@media (max-width:359px){
+	.wrapper > header { background-color:#ffffff;}
+	.h1span2{ color:#000000;}
+	.h1main {  padding:30px 0;}
+	}
+
+
+
+
+
