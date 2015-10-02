@@ -147,7 +147,7 @@ a:hover {color:rgba(255,255,255,1);}
 .content p { line-height:24px;  margin-bottom:20px;}
 
 
-.details { float:left; width:100%; padding-top:20px; margin-top:14px; border-top:1px solid #424242; text-align:right; line-height:24px;}
+.details { float:left; width:100%; padding-top:20px; margin-top:40px; border-top:1px solid #424242; text-align:right; line-height:24px;}
 
 .details span { }
 .details a { font-size:21px; }
