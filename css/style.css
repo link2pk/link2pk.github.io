@@ -41,6 +41,24 @@ table {
 
 /*@import url(http://fonts.googleapis.com/css?family=Old+Standard+TT:400,400italic);*/
 
+
+#load_screen{
+	background: #000;
+	opacity: .8;
+	position: fixed;
+    z-index:10;
+	top: 0px;
+	width: 100%;
+	height: 1600px;
+}
+#load_screen > #loading{
+	color:#FFF;
+	width:120px;
+	height:24px;
+	margin: 300px auto;
+}
+ 
+
 *{	
 	box-sizing:border-box;
 	-moz-box-sizing:border-box;
@@ -55,7 +73,7 @@ body {
 ::selection { background:#eeeeee; color:#111111;}
 ::-moz-selection {	background:#eeeeee;color:#111111;}
 img { max-width:100%; height:auto;}
-a{ color:rgba(255,255,255,.7); text-decoration:none;}
+a{ color:rgba(255,255,255,.7); text-decoration:none; -webkit-transition: .3s ease;-o-transition: .3s ease;transition: .3s ease;}
 a:hover {color:rgba(255,255,255,1);}
 
 
@@ -94,11 +112,13 @@ a:hover {color:rgba(255,255,255,1);}
 .content p { line-height:24px; font-size:17px; margin-bottom:20px;}
 
 
-.details { float:left; width:100%; padding-top:20px; margin-top:40px; border-top:1px solid #424242; text-align:right; line-height:24px;}
+.details { float:left; width:100%; padding-top:20px; margin-top:17px; border-top:1px solid #424242; text-align:right; line-height:24px;}
 
 .details span { font-size:18px;}
-.details a { font-size:16px;}
-
+.details a { font-size:16px; display: block;}
+.cv-arrow{
+	font-style: normal;
+}
 .pic2 {  display:none;}
 /*Media queries*/
 
