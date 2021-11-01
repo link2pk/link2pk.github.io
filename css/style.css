@@ -94,6 +94,10 @@ body {
 	
 	
 }
+
+.d-none {
+	display: none;
+}
 .work{ background: #fff;}
 ::-moz-selection { background:#eeeeee; color:#111111;}
 ::selection { background:#eeeeee; color:#111111;}
@@ -131,7 +135,7 @@ a:hover {color:rgba(255,255,255,1);}
 .h1main { text-align:center; font-size:30px; font-family: 'simplificasimplifica'; line-height:30px; padding:50px 0; display:inline-block;}
 .h1slash{ background: url(../images/slash.png) center center no-repeat; width:12px; height:32px; display:inline-block; vertical-align:bottom;}
 
-.h1span1 { margin-left:14px; }
+.h1span1 { margin-left:-34px; }
 .h1span2 { color:#ffffff; }
 .work .h1span2 { color: #000;}
 
@@ -149,8 +153,8 @@ a:hover {color:rgba(255,255,255,1);}
 
 .details { float:left; width:100%; padding-top:20px; margin-top:40px; border-top:1px solid #424242; text-align:right; line-height:24px;}
 
-.details span { }
-.details a { font-size:21px; }
+
+.details a { font-size:21px; display: block;}
 
 .pic2 {  display:none;}
 
