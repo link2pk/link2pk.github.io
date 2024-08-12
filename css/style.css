@@ -1,161 +1,140 @@
-@charset "UTF-8";
-/* CSS Document */
+@import "reset.css";
+@import "loader.css";
 
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
+:root {
+    --black: #000000;
+    --white: #ffffff;
+    --white-rgb: 255, 255, 255;
+    --text-spacer: 10px;
+    --backdrop-zindex: 1050;
+    --17px: 1.0625rem;
+    --18px: 1.125rem;
+}
 
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
-	display: block;
-}
 body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after, q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-/* Custom CSS for: designgems.in
-   Author: Praveen Kumar 
-   */
-
-/*@import url(http://fonts.googleapis.com/css?family=Old+Standard+TT:400,400italic);*/
-
-
-#load_screen{
-	background: #000;
-	opacity: .8;
-	position: fixed;
-    z-index:10;
-	top: 0px;
-	width: 100%;
-	height: 1600px;
-}
-#load_screen > #loading{
-	color:#FFF;
-	width:120px;
-	height:24px;
-	margin: 300px auto;
-}
- 
-
-*{	
-	box-sizing:border-box;
-	-moz-box-sizing:border-box;
-	-webkit-box-sizing:border-box;
-	}
-   
-body {
-	background: url(../images/blackNwhite.png) center top repeat-y;
-	font-family: 'Cardo', serif;
-	
-}
-::selection { background:#eeeeee; color:#111111;}
-::-moz-selection {	background:#eeeeee;color:#111111;}
-img { max-width:100%; height:auto;}
-a{ color:rgba(255,255,255,.7); text-decoration:none; -webkit-transition: .3s ease;-o-transition: .3s ease;transition: .3s ease;}
-a:hover {color:rgba(255,255,255,1);}
-
-
-.outer {
-    display: table;
-    position: absolute;
-    height: 100%;
-    width: 100%;
+    margin: 0;
+    font-family: 'Cardo', serif;
+    background-color: var(--black);
+    color: rgba(var(--white-rgb), 0.9);
 }
 
-.middle {
-    display: table-cell;
-    vertical-align: middle;
+a {
+    text-decoration: none;
+}
+
+/* .wrapper {
+    display: grid;
+    grid-template-rows: 1fr auto 1fr;
+} */
+
+.header {
+    display: grid;
+    place-content: center;
+    background-color: var(--white);
+    color: var(--black);
+}
+
+.main {
+    container-type: inline-size;
+}
+
+.title {
+    text-align: center;
+    padding-block: 2rem;
+    margin: 0;
 }
 
 
+.pic {
 
-.wrapper {
-	width: 708px;
-	margin: 0 auto; 
+    img {
+        margin-inline-start: auto;
+    }
 }
 
+.content {
+    font-size: var(--17px);
+    padding-block: 2.5rem;
 
-.mainSecion { margin-bottom:100px;width:100%; float:left;}
-
-.h1main { text-align:center; font-size:30px; line-height:30px; padding:50px 0;}
-.h1slash{ background: url(../images/slash.png) center center no-repeat; width:12px; height:28px; display:inline-block; vertical-align:bottom;}
-.h1span { color:#ffffff; margin-right:20px;}
-
-
-
-.pic { float:left;}
-
-.content { float:left; width:353px; border: 1px solid #424242; border-left:none; color:rgba(255,255,255,.9);  font-style:italic; padding:71px 37px;}
-
-.content p { line-height:24px; font-size:17px; margin-bottom:20px;}
-
-
-.details { float:left; width:100%; padding-top:20px; margin-top:17px; border-top:1px solid #424242; text-align:right; line-height:24px;}
-
-.details span { font-size:18px;}
-.details a { font-size:16px; display: block;}
-.cv-arrow{
-	font-style: normal;
+    p+p {
+        margin-top: 1rem;
+    }
 }
-.pic2 {  display:none;}
-/*Media queries*/
 
-@media (max-width:708px){
-	.wrapper { width:100%; }
-	.pic { width:50%;}
-	.content { width:50%; border:none; padding-bottom:0; padding-top:40px;}
-	.mainSecion {  background-color:#000000; border-top:1px solid #424242; border-bottom:1px solid #424242;}
-	}
+.title,
+.content,
+.footer {
+    padding-inline: var(--text-spacer);
+}
 
-@media (max-width:640px){
-	.details { margin-top:28px;}
-	
-	}
+.content,
+.footer {
 
-@media (max-width:639px){
-	.mainSecion { margin-bottom:0;}
-	.wrapper { margin:0 auto;}
-	.pic,.content { width:100%; float:left;}
-	.pic { text-align:right;}
-	.details{ padding-bottom:20px;}
-	.h1main { font-size:28px; }
-	}
-@media (max-width:480px){
-	.h1main { font-size:21px;}
-	.h1span {    margin-right: 12px;}
-	.pic2 { display:inline-block;}
-	.pic1 { display:none;}
-	}
+    font-style: italic;
+}
 
-@media (max-width:359px){
-	.wrapper > header { background-color:#ffffff;}
-	.h1span{ color:#000000;}
-	.h1main { font-size:18px; padding:30px 0;}
-	}
+.footer {
+    padding-block: 1.5rem;
+    border-top: 1px solid rgba(var(--white-rgb), 0.25);
+
+    .name {
+        font-size: var(--18px);
+    }
+
+    a {
+        display: block;
+        color: rgba(var(--white-rgb), 0.7);
+        transition: color 0.3s ease;
+
+        &:hover {
+            color: var(--white);
+        }
+    }
+}
+
+@container (width >=42em) {
+    .card {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (width >=42em) {
+    body {
+        display: grid;
+        background-color: var(--white);
+    }
+
+    .content {
+        background-color: var(--black);
+    }
+
+    .wrapper {
+        display: grid;
+        grid-template-areas:
+            "header header "
+            "main main"
+            "main main"
+            "footer .";
+        align-self: center;
+        width: min(42em, 100%);
+        margin-inline: auto;
+    }
+
+    .header {
+        grid-area: header;
+    }
+
+    .main {
+        grid-area: main;
+    }
 
 
+}
 
+@media (max-width: 42em) {
+    .footer {
+        text-align: right;
+    }
 
-
+}

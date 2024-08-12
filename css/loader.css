@@ -1,0 +1,81 @@
+#load_screen {
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    z-index: var(--backdrop-zindex);
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    place-content: center;
+    backdrop-filter: blur(3px);
+}
+
+.dot-1,
+.dot-2,
+.dot-3 {
+    opacity: 0;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+}
+
+.dot-1 {
+    animation-name: show1;
+}
+
+.dot-2 {
+    animation-delay: .5s;
+    animation-name: show2;
+}
+
+.dot-3 {
+    animation-delay: 1s;
+    animation-name: show3;
+}
+
+@keyframes show1 {
+    0% {
+        opacity: 0;
+    }
+
+    10%,
+    70% {
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 0;
+    }
+}
+
+
+@keyframes show2 {
+    0% {
+        opacity: 0;
+    }
+
+    10%,
+    40% {
+        opacity: 1;
+    }
+
+    60% {
+        opacity: 0;
+    }
+}
+
+@keyframes show3 {
+    0% {
+        opacity: 0;
+    }
+
+    10%,
+    20% {
+        opacity: 1;
+    }
+
+    30% {
+        opacity: 0;
+    }
+}
