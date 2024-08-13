@@ -5,10 +5,14 @@
     --black: #000000;
     --white: #ffffff;
     --white-rgb: 255, 255, 255;
-    --text-spacer: 10px;
+    --text-spacer: 20px;
     --backdrop-zindex: 1050;
     --17px: 1.0625rem;
     --18px: 1.125rem;
+
+    @media (width >=42em) {
+        --text-spacer: 30px;
+    }
 }
 
 body {
@@ -21,11 +25,6 @@ body {
 a {
     text-decoration: none;
 }
-
-/* .wrapper {
-    display: grid;
-    grid-template-rows: 1fr auto 1fr;
-} */
 
 .header {
     display: grid;
@@ -46,7 +45,6 @@ a {
 
 
 .pic {
-
     img {
         margin-inline-start: auto;
     }
@@ -63,19 +61,30 @@ a {
 
 .title,
 .content,
-.footer {
+.address {
     padding-inline: var(--text-spacer);
 }
 
 .content,
-.footer {
-
+.address {
     font-style: italic;
 }
 
-.footer {
+.address {
     padding-block: 1.5rem;
-    border-top: 1px solid rgba(var(--white-rgb), 0.25);
+    text-align: right;
+    position: relative;
+
+    &::before {
+        content: "";
+        display: block;
+        height: 1px;
+        background-color: rgba(var(--white-rgb), 0.25);
+        width: calc(100% - 2 * var(--text-spacer));
+        top: 0;
+        left: var(--text-spacer);
+        position: absolute;
+    }
 
     .name {
         font-size: var(--18px);
@@ -95,7 +104,24 @@ a {
 @container (width >=42em) {
     .card {
         display: grid;
+        grid-template-areas: "pic content-area"
+            "pic address"
+        ;
         grid-template-columns: 1fr 1fr;
+    }
+
+    .pic {
+        grid-area: pic;
+        align-self: center;
+    }
+
+    .content {
+        grid-area: content-area;
+        align-self: center;
+    }
+
+    .address {
+        grid-area: address;
     }
 }
 
@@ -105,36 +131,15 @@ a {
         background-color: var(--white);
     }
 
-    .content {
+    .card {
         background-color: var(--black);
     }
 
     .wrapper {
         display: grid;
-        grid-template-areas:
-            "header header "
-            "main main"
-            "main main"
-            "footer .";
         align-self: center;
-        width: min(42em, 100%);
         margin-inline: auto;
+        width: min(100%, 50em);
+        grid-template-rows: 1fr auto 1fr;
     }
-
-    .header {
-        grid-area: header;
-    }
-
-    .main {
-        grid-area: main;
-    }
-
-
-}
-
-@media (max-width: 42em) {
-    .footer {
-        text-align: right;
-    }
-
 }
